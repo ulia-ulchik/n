@@ -1,0 +1,112 @@
+.nazvavirsha {
+    font-weight: bold;   
+}
+.gallery {
+  column-count: 3; /* кількість колонок, можеш змінювати */
+  column-gap: 20px; /* відстань між колонками */
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%; /* щоб фото займало всю ширину колонки */
+  margin-bottom: 20px; /* відстань між фото по висоті */
+  border: 4px solid #2d1e01;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  display: block; /* прибирає зайві пробіли */
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+/* Загальні стилі */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #d0eaff, #b2d8d8);
+  color: #1f3b2c;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* Шапка */
+header {
+  background-color: #a3c9c9;
+  padding: 30px 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border-bottom: 3px solid #2e5e4f;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+  font-size: 2.8em;
+  margin: 0;
+  color: #1f3b2c;
+  text-shadow: 1px 1px #7fb8b8;
+}
+
+/* Навігація */
+nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  background-color: #e6f7ff;
+  color: #1f3b2c;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: 2px solid #2e5e4f;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: #cceeff;
+  color: #2e5e4f;
+  transform: scale(1.05);
+}
+
+/* Фото */
+img {
+  max-width: 90%;
+  border-radius: 30px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  margin: 40px auto;
+  animation: zoomIn 1.5s ease;
+}
+
+/* Привітальний текст */
+p {
+  font-size: 20px;
+  margin: 30px auto;
+  max-width: 700px;
+  background-color: #f0fdfd;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  line-height: 1.6;
+  animation: fadeInUp 2s ease;
+}
+
+/* Анімації */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
